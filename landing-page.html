@@ -11,8 +11,8 @@
       a:visited, a {color:#FFF}
       a:hover {color:#BEC2C3}
       body {background: url('images/background.jpg');}
-      .gray-btn { background-color: #ecf0f1; color: #2d525d; }
-      .gray-btn:hover { background-color: #BEC2C3; color: #2d525d; }
+      .btn-gray { background-color: #ecf0f1; color: #2d525d; }
+      .btn-gray:hover { background-color: #BEC2C3; color: #2d525d; }
     </style>
   </head>
   <body>
@@ -26,7 +26,7 @@
 
         <ul class="nav nav-pills">
           <li class="dropdown">
-            <button role="button" data-toggle="dropdown" href="#" class="btn gray-btn">Direction <b class="caret"></b></button>
+            <button role="button" data-toggle="dropdown" href="#" class="btn btn-gray">Direction <b class="caret"></b></button>
             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
               <li><a href="#">Never</a></li>
               <li><a href="#">Eat</a></li>
@@ -35,15 +35,27 @@
             </ul>
           </li>
           <li>
-            <button class="btn gray-btn" data-toggle="modal" data-target="#myModal">
+            <button class="btn btn-gray" data-toggle="modal" rel="tooltip" data-target="#myModal">
               Hack someones Facebook
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-gray" data-toggle="tooltip" data-placement="top" title="Do not press this button">
+              Win $100!
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-gray" data-toggle="collapse" data-target="#hide-nav-bar">
+              Hide Nav
             </button>
           </li>
         </ul>
 
-             
-      
       </div>
+
+
+
+
 
       <div class="row">
       <br/><br/>
@@ -66,28 +78,33 @@
 
       </div>
 
-      <div class="row">
-        <nav role="navigation" class="navbar navbar-default navbar-fixed-bottom">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <!-- Collection of nav links and other content for toggling -->
-          <div id="navbarCollapse" class="navbar-collapse collapse show-footer ">
-            <ul class="nav navbar-nav">
-              <li><a href="http://projecteuler.net/profile/cevaris.xml">Project Euler</a></li>
-              <li><a href="#does-not-exist">Blog</a></li>
-              <li><a href="#does-not-exist">CV</a></li>
-            </ul>
-          </div>
-        </nav>
+
+
+
+
+      <div id="hide-nav-bar" class="collapse in">
+        <div class="row">
+          <nav role="navigation" class="navbar navbar-default navbar-fixed-bottom">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- Collection of nav links and other content for toggling -->
+            <div id="navbarCollapse" class="navbar-collapse collapse show-footer ">
+              <ul class="nav navbar-nav">
+                <li><a href="http://projecteuler.net/profile/cevaris.xml">Project Euler</a></li>
+                <li><a href="#does-not-exist">Blog</a></li>
+                <li><a href="#does-not-exist">CV</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
-    
     </div>
 
 
@@ -143,10 +160,12 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-    $(function() {
+    $(document).ready(function () {
       $('.collapse.show-footer').on('show', function () {
         $("html, body").animate({ scrollTop: $(document).height() }, "slow");
       });
+
+      $("[data-toggle=tooltip").tooltip();
     });
     </script>
   </body>
