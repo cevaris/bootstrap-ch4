@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+  </head>
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">PleaseSignUpApp</a>
+        </div>
+          <ul class="nav navbar-nav">
+            <li><a href="#about">Register</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Spacing for NavBar -->
+      <br/><br/><br/>
+
+      <div id="container_alert"></div>
+
+
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+
+        <div class="row well">
+
+          <form class="form-horizontal" role="form">
+            
+
+            <div class="form-group has-success">
+              <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control input-lg" id="inputEmail3" placeholder="Email">
+              </div>
+            </div>
+            
+
+            <div class="form-group has-success">
+              <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control input-sm" id="inputPassword3" placeholder="Password">
+                <p class="help-block">Do not enter 1234.</p>
+              </div>
+            </div>
+            
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox1" value="option1"> Star Wars
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox2" value="option2"> Star Trek
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox3" value="option3"> Battlestar Galactica
+                </label>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label for="inputGender3" class="col-sm-2 control-label">Gender</label>
+              <div class="col-sm-10">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="male">
+                    Male
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="female">
+                    Female
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="decline" checked>
+                     Decline to specify
+                  </label>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <a class="btn btn-default" href="./index.html">Cancel</a>
+                <button type="reset" class="btn btn-primary">Reset</button>
+                <button type="submit" class="btn btn-success">Sign up</button>
+              </div>
+            </div>
+          </form>
+          
+          </div>
+
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
+
+
+      <div class="footer">
+        <div class="well well-sm">Made by Adam Cardenas &mdash; Stored <a href="https://github.com/cevaris/bootstrap-ch3" target="_blank">https://github.com/cevaris/bootstrap-ch3</a></div>
+      </div>
+    
+    </div>
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script>
+      $('#contact_request').on('click', function() { $('#container_alert').html($("#alert_contact").html()); });
+    </script>
+  </body>
+</html>
