@@ -40,13 +40,18 @@
             </button>
           </li>
           <li>
-            <button type="button" class="btn btn-gray" data-toggle="tooltip" data-placement="top" title="Do not press this button">
+            <button type="button" class="btn btn-gray" data-toggle="tooltip" data-placement="bottom" title="Do not press this button">
               Win $100!
             </button>
           </li>
           <li>
             <button type="button" class="btn btn-gray" data-toggle="collapse" data-target="#hide-nav-bar">
               Hide Nav
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-gray" data-toggle="popover" data-container="body" data-placement="bottom" data-content="Corn!!">
+              Pop
             </button>
           </li>
         </ul>
@@ -166,6 +171,7 @@
       });
 
       $("[data-toggle=tooltip").tooltip();
+      $("[data-toggle=popover").popover();
     });
     </script>
   </body>
