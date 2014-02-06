@@ -17,9 +17,16 @@
 
     <div class="container">
 
-      <div class="row">
+      <br/><br/>
 
-        <br/><br/><br/><br/>
+      <div class="row pull-right">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          Hack someones Facebook
+        </button>
+      </div>
+
+      <div class="row">
+      <br/><br/>
 
         <div class="col-lg-3"></div>
         <div class="col-lg-6 text-center">
@@ -72,10 +79,37 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            <h4 class="modal-title" id="myModalLabel">Hack someones Facebook</h4>
           </div>
           <div class="modal-body">
-            ...
+            <form class="form-horizontal" role="form">
+            
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Account URL</label>
+                <div class="col-sm-10">
+                  <input type="input" class="form-control input-lg" id="inputEmail3" placeholder="https://www.facebook.com/ruby.rodriguez.37017">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Your Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control input-lg" id="inputEmail3" placeholder="my.facebook.email@gmail.com">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Your Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control input-lg" id="inputEmail3" placeholder="**********">
+                </div>
+              </div>
+            
+            </form>
+
+            <p class="help-block pull-right">Disclaimer....do not do this.</p>
+          
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
